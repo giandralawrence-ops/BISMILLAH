@@ -7,12 +7,11 @@
 
 body {
     font-family: Poppins, Arial, sans-serif;
-    background: linear-gradient(135deg, #c9eaff, #f7d9ff, #fff0d6);
-    background-size: 300% 300%;
-    animation: gradientMove 18s ease infinite;
+    background: url('Pemandangan_Gunung_Bromo.jpg') center/cover no-repeat fixed;
     color: #2c3e50;
     line-height: 1.7;
 }
+
 
 /* Background Animasi Bergerak */
 @keyframes gradientMove {
