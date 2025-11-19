@@ -7,21 +7,34 @@
 
 body {
     font-family: Poppins, Arial, sans-serif;
-    background: #f5f7fa;
+    background: linear-gradient(135deg, #c9eaff, #f7d9ff, #fff0d6);
+    background-size: 300% 300%;
+    animation: gradientMove 18s ease infinite;
     color: #2c3e50;
     line-height: 1.7;
+}
+
+/* Background Animasi Bergerak */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* HEADER */
 header {
     background: url('bromo.jpg') center/cover no-repeat;
-    height: 300px;
+    height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
 }
 
+/* Overlay gelap */
 header::before {
     content: "";
     position: absolute;
@@ -29,11 +42,28 @@ header::before {
     background: rgba(0, 0, 0, 0.45);
 }
 
+/* Decorative Light Glow */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    width: 120%;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255,255,255,0.8), transparent);
+    filter: blur(40px);
+}
+
 header h1 {
     position: relative;
     color: white;
-    font-size: 42px;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+    font-size: 48px;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+    animation: fadeDown 1.4s ease;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* CONTAINER */
@@ -41,15 +71,22 @@ header h1 {
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
     padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .container h2 {
     color: #0d4b70;
-    font-size: 26px;
+    font-size: 28px;
     margin-bottom: 12px;
 }
 
@@ -59,18 +96,19 @@ header h1 {
 
 /* HIGHLIGHT */
 .highlight {
-    background: #EAF7FF;
+    background: linear-gradient(135deg, #d9f2ff, #e8f8ff);
     border-left: 6px solid #0D89C6;
-    padding: 14px 18px;
+    padding: 16px 18px;
     margin: 24px 0;
-    border-radius: 8px;
+    border-radius: 10px;
     color: #0d4b70;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
-/* CARD GRID */
+/* GRID KARTU DESTINASI */
 .destinasi-container {
     display: grid;
-    gap: 20px;
+    gap: 22px;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 30px;
 }
@@ -78,20 +116,45 @@ header h1 {
 /* CARD */
 .card {
     background: white;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
-    transition: 0.25s;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
     cursor: pointer;
+    position: relative;
 }
 
+/* Efek Glow saat hover */
 .card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi Shine Selection */
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg, 
+        rgba(255,255,255,0.1) 0%, 
+        rgba(255,255,255,0.6) 50%, 
+        rgba(255,255,255,0.1) 100%
+    );
+    transform: skewX(-20deg);
+    transition: 0.6s;
+}
+
+.card:hover::after {
+    left: 120%;
 }
 
 .card img {
     width: 100%;
-    height: 160px;
+    height: 170px;
     object-fit: cover;
 }
 
@@ -101,16 +164,36 @@ header h1 {
 
 .card-body h3 {
     color: #0d4b70;
-    margin-bottom: 6px;
-    font-size: 18px;
+    margin-bottom: 8px;
+    font-size: 20px;
 }
 
-/* BAGIAN PROGRAM AWAL (TOMBOL KLIK) */
+/* TOMBOL PROGRAM */
 #klikBtn {
-    padding: 10px 20px;
-    background: #0D89C6;
+    padding: 12px 26px;
+    background: linear-gradient(135deg, #0D89C6, #0aa9e6);
     border: none;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16p
+    font-size: 17px;
+    transition: 0.3s;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+#klikBtn:hover {
+    background: linear-gradient(135deg, #0aa9e6, #0D89C6);
+    transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .destinasi-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 520px) {
+    .destinasi-container {
+        grid-template-columns: 1fr;
+    }
+}
