@@ -22,7 +22,7 @@ body {
 
 /* HEADER */
 header {
-    background: url('Pemandangan_Gunung_Bromo.jpg') center/cover no-repeat;
+    background: url('img/Pemandangan_Gunung_Bromo.jpg') center/cover no-repeat;
     height: 320px;
     display: flex;
     justify-content: center;
