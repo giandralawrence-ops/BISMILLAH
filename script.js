@@ -55,9 +55,9 @@ function tampilkanInfo(wisata) {
     alert(info[wisata] || "Informasi wisata tidak ditemukan.");
 }
 
-// Double-click → buka info lengkap
+// Single-click → buka info lengkap
 cards.forEach(card => {
-    card.addEventListener("oneclick", () => {
+    card.addEventListener("click", () => {
         const wisata = card.querySelector("h3").textContent;
         tampilkanInfo(wisata);
     });
