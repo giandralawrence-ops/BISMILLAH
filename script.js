@@ -1,16 +1,51 @@
-// --- Fitur asli: Tombol "Klik Aku" ---
+// ===============================
+//  TOMBOL KLIK AKU (FITUR ASLI)
+// ===============================
 const button = document.getElementById("klikBtn");
 const output = document.getElementById("output");
+
+// Tombol Klik Aku dinonaktifkan sebelum search
+button.disabled = true;
+button.style.opacity = "0.5";
+button.style.cursor = "not-allowed";
 
 button.addEventListener("click", () => {
     const waktu = new Date().toLocaleTimeString();
     output.textContent = `Tombol diklik pada: ${waktu}`;
 });
 
-// ------------ Fitur tambahan untuk website wisata Jawa Timur ------------
-
-// Ambil semua elemen kartu wisata
+// ===============================
+//  FITUR SEARCH DESTINASI
+// ===============================
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
 const cards = document.querySelectorAll(".card");
+
+searchBtn.addEventListener("click", () => {
+    let keyword = searchInput.value.toLowerCase().trim();
+
+    // --- Jika user sudah mencari → aktifkan tombol Klik Aku ---
+    if (keyword !== "") {
+        button.disabled = false;
+        button.style.opacity = "1";
+        button.style.cursor = "pointer";
+    }
+
+    // --- Filter card wisata berdasarkan keyword ---
+    cards.forEach(card => {
+        const nama = card.querySelector("h3").innerText.toLowerCase();
+
+        if (nama.includes(keyword)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
+// ===============================
+//  FITUR WISATA – ADA DI KODE LAMAMU
+// ===============================
 
 // Efek single-click: menampilkan nama wisata
 cards.forEach(card => {
