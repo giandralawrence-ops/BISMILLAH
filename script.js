@@ -6,6 +6,7 @@ const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 const cards = document.querySelectorAll(".card");
 
+searchBtn.addEventListener("click", () => {
     let keyword = searchInput.value.toLowerCase().trim();
 
     let hasil = 0;
