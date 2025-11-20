@@ -191,3 +191,36 @@ header h1 {
         grid-template-columns: 1fr;
     }
 }
+/* PC / Default → 3 kolom */
+.destinasi-container {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* HP & Tablet → 2 kolom */
+@media (max-width: 768px) {
+    .destinasi-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+}
+
+/* HP kecil → tetap 2 kolom */
+@media (max-width: 520px) {
+    .destinasi-container {
+        grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom */
+        gap: 14px;
+    }
+
+    .card-body h3 {
+        font-size: 16px;
+    }
+
+    .card-body p {
+        font-size: 13px;
+    }
+}
