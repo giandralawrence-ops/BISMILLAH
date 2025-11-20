@@ -7,22 +7,18 @@
 
 body {
     font-family: Poppins, Arial, sans-serif;
-    background: url('Pemandangan_Gunung_Bromo.jpg') center/cover no-repeat fixed;
+
+    /* 🌸 BACKGROUND SOFT TANPA GAMBAR */
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
     color: #2c3e50;
     line-height: 1.7;
 }
 
-
-/* Background Animasi Bergerak */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
 /* HEADER */
 header {
-    background: url('img/Pemandangan_Gunung_Bromo.jpg') center/cover no-repeat;
+    /* GANTI GAMBAR DENGAN WARNA SOFT */
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+
     height: 320px;
     display: flex;
     justify-content: center;
@@ -33,12 +29,9 @@ header {
     overflow: hidden;
 }
 
-/* Overlay gelap */
+/* Overlay gelap — DIHAPUS karena tidak butuh */
 header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    display: none;
 }
 
 /* Decorative Light Glow */
@@ -48,15 +41,15 @@ header::after {
     bottom: -40px;
     width: 120%;
     height: 120px;
-    background: radial-gradient(circle, rgba(255,255,255,0.8), transparent);
-    filter: blur(40px);
+    background: radial-gradient(circle, rgba(255,255,255,0.9), transparent);
+    filter: blur(50px);
 }
 
 header h1 {
     position: relative;
-    color: white;
+    color: #333;
     font-size: 48px;
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 3px 10px rgba(255,255,255,0.7);
     animation: fadeDown 1.4s ease;
 }
 
@@ -70,11 +63,12 @@ header h1 {
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
-    background: rgba(255, 255, 255, 0.8);
+
+    background: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(6px);
     animation: fadeUp 1.2s ease;
 }
 
@@ -91,6 +85,7 @@ header h1 {
 
 .container p {
     margin-bottom: 14px;
+    color: #444;
 }
 
 /* HIGHLIGHT */
@@ -123,13 +118,11 @@ header h1 {
     position: relative;
 }
 
-/* Efek Glow saat hover */
 .card:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
 }
 
-/* Animasi Shine Selection */
 .card::after {
     content: "";
     position: absolute;
@@ -138,9 +131,9 @@ header h1 {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        120deg, 
-        rgba(255,255,255,0.1) 0%, 
-        rgba(255,255,255,0.6) 50%, 
+        120deg,
+        rgba(255,255,255,0.1) 0%,
+        rgba(255,255,255,0.5) 50%,
         rgba(255,255,255,0.1) 100%
     );
     transform: skewX(-20deg);
@@ -191,6 +184,7 @@ header h1 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 @media (max-width: 520px) {
     .destinasi-container {
         grid-template-columns: 1fr;
