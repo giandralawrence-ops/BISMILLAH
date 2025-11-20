@@ -59,6 +59,5 @@ function tampilkanInfo(wisata) {
 cards.forEach(card => {
     card.addEventListener("click", () => {
         const wisata = card.querySelector("h3").textContent;
-        tampilkanInfo(wisata);
     });
 });
