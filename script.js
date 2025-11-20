@@ -1,36 +1,7 @@
 // ===============================
-//  TOMBOL KLIK AKU
-// ===============================
-const button = document.getElementById("klikBtn");
-const output = document.getElementById("output");
-
-// Tombol Klik Aku tidak aktif sebelum search
-button.disabled = true;
-button.style.opacity = "0.5";
-button.style.cursor = "not-allowed";
-
-let hasilPencarianSaatIni = []; // <-- daftar card yang muncul setelah search
-
-button.addEventListener("click", () => {
-
-    // Jika belum ada hasil pencarian, tombol tidak bekerja
-    if (hasilPencarianSaatIni.length === 0) {
-        output.textContent = "Silakan cari destinasi dulu!";
-        return;
-    }
-
-    // Jika ada hasil pencarian → tampilkan nama semua destinasi yang cocok
-    const namaDestinasi = hasilPencarianSaatIni
-        .map(card => card.querySelector("h3").innerText)
-        .join(", ");
-
-    output.textContent = `Destinasi ditemukan: ${namaDestinasi}`;
-});
-
-
-// ===============================
 //  FITUR SEARCH DESTINASI
 // ===============================
+
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 const cards = document.querySelectorAll(".card");
@@ -38,45 +9,29 @@ const cards = document.querySelectorAll(".card");
 searchBtn.addEventListener("click", () => {
     let keyword = searchInput.value.toLowerCase().trim();
 
-    hasilPencarianSaatIni = []; // reset dulu
-
-    // Jika user mengetik sesuatu → aktifkan tombol
-    if (keyword !== "") {
-        button.disabled = false;
-        button.style.opacity = "1";
-        button.style.cursor = "pointer";
-    } else {
-        // Jika kolom search kosong → matikan tombol lagi
-        button.disabled = true;
-        button.style.opacity = "0.5";
-        hasilPencarianSaatIni = [];
-    }
+    let hasil = 0;
 
     cards.forEach(card => {
         const nama = card.querySelector("h3").innerText.toLowerCase();
 
         if (nama.includes(keyword)) {
             card.style.display = "block";
-            hasilPencarianSaatIni.push(card);  // simpan card yang cocok
+            hasil++;
         } else {
             card.style.display = "none";
         }
     });
 
-    // Jika tidak ada card cocok → matikan tombol Klik Aku
-    if (hasilPencarianSaatIni.length === 0) {
-        button.disabled = true;
-        button.style.opacity = "0.5";
-        output.textContent = "Destinasi tidak ditemukan!";
+    if (hasil === 0) {
+        alert("Destinasi tidak ditemukan!");
     }
 });
 
-
 // ===============================
-//  FITUR CARD (kode lama tetap ada)
+//  FITUR CARD
 // ===============================
 
-// Efek single-click: tampilkan nama wisata
+// Single click → tampilkan nama wisata
 cards.forEach(card => {
     card.addEventListener("click", () => {
         const namaWisata = card.querySelector("h3").textContent;
@@ -84,7 +39,7 @@ cards.forEach(card => {
     });
 });
 
-// Detail wisata
+// Info detail wisata
 function tampilkanInfo(wisata) {
     const info = {
         "Gunung Bromo":
@@ -100,7 +55,7 @@ function tampilkanInfo(wisata) {
     alert(info[wisata] || "Informasi wisata tidak ditemukan.");
 }
 
-// Double-click: tampilkan info lengkap
+// Double-click → buka info lengkap
 cards.forEach(card => {
     card.addEventListener("dblclick", () => {
         const wisata = card.querySelector("h3").textContent;
