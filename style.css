@@ -15,9 +15,10 @@ body {
 }
 
 /* HEADER */
+/* HEADER */
 header {
-    /* GANTI GAMBAR DENGAN WARNA SOFT */
-    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    /* GRADASI HIJAU SOFT */
+    background: linear-gradient(135deg, #a8e6cf, #56ab2f);
 
     height: 320px;
     display: flex;
