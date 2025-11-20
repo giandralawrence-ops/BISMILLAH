@@ -1,80 +1,61 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Website Wisata Jawa Timur</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Jawa Timur</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>WISATA JAWA TIMUR</h1>
+        <h1>Wisata Jawa Timur</h1>
     </header>
 
     <div class="container">
-
-        <h2>Tentang Wisata Jawa Timur</h2>
+        
+        <h2>Selamat Datang!</h2>
         <p>
-            Jawa Timur merupakan salah satu provinsi dengan destinasi wisata paling lengkap di Indonesia.
-            Mulai dari wisata alam seperti Gunung Bromo dan Kawah Ijen,
-            hingga pantai indah seperti Papuma dan Balekambang.
-            Selain itu, kuliner khas seperti rawon, rujak cingur, dan pecel Madiun
-            juga menjadi daya tarik tersendiri bagi wisatawan.
+            Jelajahi berbagai destinasi wisata indah di Jawa Timur. Temukan gunung, pantai,
+            dan tempat populer lainnya.
         </p>
-
-        <div class="highlight">
-            Jawa Timur menawarkan keindahan alam, budaya, sejarah, dan kuliner,
-            menjadikannya salah satu destinasi wisata yang wajib dikunjungi.
-        </div>
-
-        <h2>Destinasi Populer</h2>
-
-        <div class="destinasi-container">
-            <div class="card">
-                <img src="bromo.jpg" alt="Gunung Bromo">
-                <div class="card-body">
-                    <h3><a href="bromo.html">Gunung Bromo</a></h3>
-                    <p>Destinasi paling populer dengan sunrise terbaik dan lautan pasir yang luas.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="ijen.jpg" alt="Kawah Ijen">
-                <div class="card-body">
-                    <h3>Kawah Ijen</h3>
-                    <p>Terkenal dengan fenomena Blue Fire dan pemandangan kawah biru yang indah.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="papuma.jpg" alt="Pantai Papuma">
-                <div class="card-body">
-                    <h3>Pantai Papuma</h3>
-                    <p>Pantai di Jember yang memiliki pasir putih dan tebing-tebing megah.</p>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2>Interaksi Web</h2>
-        <p>wisata jawa timur:</p>
 
         <button id="klikBtn">Klik Aku</button>
         <p id="output"></p>
 
-    </div>
+        <!-- 🔍 SEARCH BAR -->
+        <input type="text" id="searchInput" placeholder="Cari destinasi wisata...">
 
-    <footer>
-        &copy; 2025 Website Wisata Jawa Timur
-    </footer>
+        <!-- DESTINASI WISATA -->
+        <div class="destinasi-container">
+
+            <div class="card">
+                <img src="https://i.imgur.com/zjujFoh.jpg" alt="Bromo">
+                <div class="card-body">
+                    <h3>Gunung Bromo</h3>
+                    <p>Gunung dengan pemandangan sunrise terindah di Jawa Timur.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.imgur.com/C6SExb4.jpg" alt="Ijen">
+                <div class="card-body">
+                    <h3>Kawah Ijen</h3>
+                    <p>Dikenal dengan api biru dan danau kawah berwarna toska.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://i.imgur.com/oBWt0uN.jpg" alt="Papuma">
+                <div class="card-body">
+                    <h3>Pantai Papuma</h3>
+                    <p>Pantai eksotis dengan batu karang besar dan pasir putih.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
