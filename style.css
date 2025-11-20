@@ -14,12 +14,9 @@ body {
     line-height: 1.7;
 }
 
-/* HEADER */
-/* HEADER */
+/* HEADER MEWAH & ELEGAN */
 header {
-    /* GRADASI HIJAU SOFT */
-    background: linear-gradient(135deg, #a8e6cf, #56ab2f);
-
+    background: linear-gradient(135deg, #0a0f24, #1a2a44); /* navy gelap */
     height: 320px;
     display: flex;
     justify-content: center;
@@ -28,30 +25,41 @@ header {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
     overflow: hidden;
+    box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.4);
 }
 
-/* Overlay gelap — DIHAPUS karena tidak butuh */
+/* simbol kompas emas */
 header::before {
-    display: none;
+    content: "🧭";
+    font-size: 150px;
+    color: rgba(255, 215, 0, 0.18);
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    transform: rotate(-18deg);
 }
 
-/* Decorative Light Glow */
+/* efek cahaya emas */
 header::after {
     content: "";
     position: absolute;
     bottom: -40px;
-    width: 120%;
-    height: 120px;
-    background: radial-gradient(circle, rgba(255,255,255,0.9), transparent);
-    filter: blur(50px);
+    width: 150%;
+    height: 130px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.35), transparent);
+    filter: blur(60px);
 }
 
+/* tulisan header */
 header h1 {
     position: relative;
-    color: #333;
+    color: #ffd700; /* gold */
     font-size: 48px;
-    text-shadow: 0 3px 10px rgba(255,255,255,0.7);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
     animation: fadeDown 1.4s ease;
+    text-align: center;
 }
 
 @keyframes fadeDown {
