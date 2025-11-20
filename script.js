@@ -1,4 +1,4 @@
-// --- Fitur asli programmu ---
+// --- Fitur asli: Tombol "Klik Aku" ---
 const button = document.getElementById("klikBtn");
 const output = document.getElementById("output");
 
@@ -7,12 +7,12 @@ button.addEventListener("click", () => {
     output.textContent = `Tombol diklik pada: ${waktu}`;
 });
 
+// ------------ Fitur tambahan untuk website wisata Jawa Timur ------------
 
-// --- Fitur tambahan untuk website wisata Jawa Timur ---
-
-// Efek saat card wisata diklik
+// Ambil semua elemen kartu wisata
 const cards = document.querySelectorAll(".card");
 
+// Efek single-click: menampilkan nama wisata
 cards.forEach(card => {
     card.addEventListener("click", () => {
         const namaWisata = card.querySelector("h3").textContent;
@@ -20,7 +20,7 @@ cards.forEach(card => {
     });
 });
 
-// Sistem pop-up informasi tambahan
+// Data penjelasan wisata
 function tampilkanInfo(wisata) {
     const info = {
         "Gunung Bromo":
@@ -36,7 +36,7 @@ function tampilkanInfo(wisata) {
     alert(info[wisata] || "Informasi wisata tidak ditemukan.");
 }
 
-// Tambahkan interaksi klik untuk membuka penjelasan wisata
+// Double-click: buka pop-up informasi lengkap
 cards.forEach(card => {
     card.addEventListener("dblclick", () => {
         const wisata = card.querySelector("h3").textContent;
