@@ -6,10 +6,12 @@
     <title>Wisata Jawa Timur</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
     <header>
         <h1>Wisata Jawa Timur</h1>
     </header>
-<body>
 
     <div class="container">
         
@@ -19,37 +21,43 @@
             dan tempat populer lainnya.
         </p>
 
-        <button id="klikBtn">Klik Aku</button>
+        <!-- 🔍 SEARCH BAR -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari destinasi wisata...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <!-- 🔘 TOMBOL KLIK AKU (Sekarang di bawah Search) -->
+        <button id="klikBtn" disabled> Klik Aku </button>
         <p id="output"></p>
 
-        <!-- 🔍 SEARCH BAR -->
-        <input type="text" id="searchInput" placeholder="Cari destinasi wisata...">
-
         <!-- DESTINASI WISATA -->
-     <div class="destinasi-container">
+        <div class="destinasi-container">
 
-    <div class="card">
-        <div class="card-body">
-            <h3><a href="bromo.html">Gunung Bromo</a></h3>
-            <p>Destinasi wisata populer dengan sunrise yang indah dan lautan pasir.</p>
+            <div class="card">
+                <div class="card-body">
+                    <h3><a href="bromo.html">Gunung Bromo</a></h3>
+                    <p>Destinasi wisata populer dengan sunrise yang indah dan lautan pasir.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Kawah Ijen</h3>
+                    <p>Terkenal dengan api biru dan danau kawah berwarna toska.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Pantai Papuma</h3>
+                    <p>Pantai cantik dengan batu karang besar dan panorama menakjubkan.</p>
+                </div>
+            </div>
+
         </div>
-    </div>
 
-    <div class="card">
-        <div class="card-body">
-            <h3>Kawah Ijen</h3>
-            <p>Terkenal dengan api biru dan danau kawah berwarna toska.</p>
-        </div>
     </div>
-
-    <div class="card">
-        <div class="card-body">
-            <h3>Pantai Papuma</h3>
-            <p>Pantai cantik dengan batu karang besar dan panorama menakjubkan.</p>
-        </div>
-    </div>
-
-</div>
 
     <script src="script.js"></script>
 </body>
