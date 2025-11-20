@@ -57,7 +57,7 @@ function tampilkanInfo(wisata) {
 
 // Double-click → buka info lengkap
 cards.forEach(card => {
-    card.addEventListener("dblclick", () => {
+    card.addEventListener("oneclick", () => {
         const wisata = card.querySelector("h3").textContent;
         tampilkanInfo(wisata);
     });
