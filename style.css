@@ -244,3 +244,13 @@ header h1 {
         transform: translateY(0);
     }
 }
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    width: 80%;          /* <-- PERKECIL LEBAR */
+    max-width: 480px;    /* <-- BATAS MAKSIMAL BIAR GAK MELEBAR */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    text-align: center;
+    margin: auto;        /* <-- BIAR TETAP TENGAH */
+}
