@@ -28,7 +28,7 @@ header {
 /* tulisan header */
 header h1 {
     position: relative;
-    color: #ffd700; /* gold */
+    color: #4C763B
     font-size: 48px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -93,7 +93,7 @@ header h1 {
 
 /* CARD */
 .card {
-    background: white;
+    background: #FFF9BD;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
