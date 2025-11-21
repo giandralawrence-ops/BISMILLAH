@@ -92,7 +92,7 @@ header h1 {
 
 /* CARD */
 .card {
-    background: #E7DEAF;
+    background: #D2DCB6;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
@@ -229,6 +229,6 @@ header h1 {
     padding: 40px;
     text-align: center;
 
-    background: linear-gradient(135deg, #FFF1D2, #E7D3AF);
+    background: linear-gradient(135deg, #D2DCB6, #E7D3AF);
     animation: fadeSlide .6s ease forwards;
 }
