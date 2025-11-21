@@ -214,7 +214,7 @@ header h1 {
     height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Biar halus */
 }
 
 .slide {
@@ -231,4 +231,16 @@ header h1 {
 
     background: #D2DCB6;   /* <— warna yang kamu minta */
     animation: fadeSlide .6s ease forwards;
+}
+
+/* Animasi smooth */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
