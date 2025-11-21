@@ -7,12 +7,11 @@
 
 body {
     font-family: Poppins, Times New Romans, sans-serif;
-    background: linear-gradient(135deg, #B0CE88, #f2ddc1);
+    background: #B0CE88;
     color: #2c3e50;
-    line-height: 1.7;
 }
 
-/* HEADER MEWAH & ELEGAN */
+/* HEADER */
 header {
     background: #4C763B;
     height: 320px;
