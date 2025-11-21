@@ -14,27 +14,28 @@ body {
 /* HEADER */
 header {
     background: #4C763B;
-    height: 260px; /* tidak terlalu tinggi */
+    height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    overflow: hidden;
     box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.4);
 }
 
-/* TULISAN HEADER */
+/* Tulisan header */
 header h1 {
+    position: relative;
     color: #FFF5F2;
-    font-size: 32px;   /* >>> kecilin disini DESKTOP */
+    font-size: 43px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-shadow: 0 4px 12px rgba(0,0,0,0.6);
-    text-align: center;
     animation: fadeDown 1.4s ease;
+    text-align: center;
 }
-
-
 
 @keyframes fadeDown {
     from { opacity: 0; transform: translateY(-20px); }
@@ -46,7 +47,6 @@ header h1 {
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
-
     background: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 20px;
@@ -92,7 +92,7 @@ header h1 {
 
 /* CARD */
 .card {
-    background: #D2DCB6;
+    background: #E7DEAF;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
@@ -162,51 +162,33 @@ header h1 {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-    .destinasi-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 520px) {
-    .destinasi-container {
-        grid-template-columns: 1fr;
-    }
-}
-/* PC / Default → 3 kolom */
-.destinasi-container {
-    display: grid;
-    gap: 22px;
-    grid-template-columns: repeat(3, 1fr);
-}
 
 /* HP & Tablet → 2 kolom */
 @media (max-width: 768px) {
     .destinasi-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     header h1 {
         font-size: 36px;
+    }
+
+    /* Anti getar HP */
+    .card:hover {
+        transform: none;
+    }
+    .card:hover::after {
+        left: -120%;
     }
 }
 
 /* HP kecil → tetap 2 kolom */
 @media (max-width: 520px) {
     .destinasi-container {
-        grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom */
+        grid-template-columns: repeat(2, 1fr);
         gap: 14px;
     }
-/* Nonaktifkan efek hover di HP */
-@media (max-width: 768px) {
-    .card:hover {
-        transform: none;
-    }
 
-    .card:hover::after {
-        left: -120%;
-    }
-}
     .card-body h3 {
         font-size: 16px;
     }
@@ -214,8 +196,7 @@ header h1 {
     .card-body p {
         font-size: 13px;
     }
-}
-@media (max-width: 520px) {
+
     header {
         text-align: center;
         display: flex;
