@@ -210,47 +210,72 @@ header h1 {
     }
 }
 /* ===================== */
-/* FULLSCREEN CARD SLIDER */
+/* FULLSCREEN CARD SLIDER FIXED */
 /* ===================== */
 
 .slides {
     height: 100vh;
-    overflow-y: auto;
+    width: 100%;
+    overflow-y: scroll;
+
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+
+    position: relative;
 }
 
+/* Setiap slide fullscreen & rapi */
 .slide {
     height: 100vh;
-    scroll-snap-align: start;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
-    background: #D2DCB6;
+
+    scroll-snap-align: start;
+
+    background: #C7D9B7; /* hijau pastel elegan */
+    padding: 40px;
 }
 
+/* Card di dalam slide */
 .slide-card {
     width: 90%;
-    max-width: 700px;
-    background: rgba(255,255,255,0.92);
-    border-radius: 22px;
+    max-width: 650px;
+
+    background: rgba(255,255,255,0.95);
     padding: 32px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+
     text-align: center;
     animation: fadeSlide 0.8s ease;
 }
 
 .slide-card h2 {
-    font-size: 30px;
+    font-size: 32px;
     color: #4C763B;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .slide-card p {
     font-size: 17px;
     color: #333;
     line-height: 1.6;
+}
+
+/* Smooth animation */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Animasi smooth */
