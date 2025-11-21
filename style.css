@@ -224,15 +224,20 @@ header h1 {
 }
 /* FULLSCREEN SLIDER */
 .slides {
+    height: 100%;
+    width: 100%;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    overflow-y: auto; /* supaya bisa scroll jika slide panjang */
 }
 
+
 /* Slide Header fullscreen */
-.slide:first-child {
-    height: 100vh;
+.slide:not(:first-child) {
+    height: auto;
+    padding: 40px 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -243,10 +248,9 @@ header h1 {
     display: block; /* biar grid bisa memanjang */
 }
 
-/* Slide card tetap rapi */
 .slide-card {
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     background: rgba(255,255,255,0.95);
     padding: 32px;
@@ -255,3 +259,4 @@ header h1 {
     text-align: center;
     animation: fadeSlide 0.8s ease;
 }
+
