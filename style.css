@@ -222,44 +222,4 @@ header h1 {
         transform: translateY(0);
     }
 }
-/* FULLSCREEN SLIDER */
-.slides {
-    height: 100%;
-    width: 100%;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    overflow-y: auto; /* supaya bisa scroll jika slide panjang */
-}
 
-
-/* Slide Header fullscreen */
-.slide:not(:first-child) {
-    height: auto;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Slide lainnya auto height */
-.slide:not(:first-child) {
-    height: auto;
-    padding: 40px 0;
-    display: block; /* biar grid bisa memanjang */
-}
-
-.slide-card {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background: rgba(255,255,255,0.95);
-    padding: 32px;
-    border-radius: 22px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-    text-align: center;
-    animation: fadeSlide 0.8s ease;
-}
-
-.slide-card h2 {
-    color: #000000; /* ganti dengan warna yang kamu inginkan */
-}
