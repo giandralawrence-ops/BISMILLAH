@@ -209,48 +209,6 @@ header h1 {
         text-align: center;
     }
 }
-/* FULLSCREEN SLIDES FIX */
-body {
-    margin: 0;
-    overflow: hidden; /* Hanya slides yang scroll */
-}
-
-.slides {
-    position: fixed; /* agar selalu fullscreen */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-.slide {
-    height: 100vh;  /* setiap slide fullscreen */
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    scroll-snap-align: start;
-
-    background: #C7D9B7; 
-    padding: 40px;
-    box-sizing: border-box; /* pastikan padding tidak pecah layout */
-}
-    .slide {
-    padding: 60px 40px;
-}
-
-   .slide:nth-child(odd) {
-    background: #C7D9B7;
-}
-.slide:nth-child(even) {
-    background: #D8E8C7;
-}
 
 
 /* Smooth animation */
