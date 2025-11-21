@@ -209,3 +209,32 @@ header h1 {
         text-align: center;
     }
 }
+/* FULLSCREEN SLIDER */
+.slides {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.slide {
+    height: 100vh;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    text-align: center;
+
+    background: linear-gradient(135deg, #FFF1D2, #E7D3AF);
+    animation: fadeSlide .8s ease forwards;
+}
+
+/* Animasi transisi */
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
