@@ -197,7 +197,16 @@ header h1 {
         grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom */
         gap: 14px;
     }
+/* Nonaktifkan efek hover di HP */
+@media (max-width: 768px) {
+    .card:hover {
+        transform: none;
+    }
 
+    .card:hover::after {
+        left: -120%;
+    }
+}
     .card-body h3 {
         font-size: 16px;
     }
