@@ -209,28 +209,48 @@ header h1 {
         text-align: center;
     }
 }
-/* FULLSCREEN SLIDER */
+/* ===================== */
+/* FULLSCREEN CARD SLIDER */
+/* ===================== */
+
 .slides {
     height: 100vh;
     overflow-y: auto;
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth; /* Biar halus */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .slide {
     height: 100vh;
     scroll-snap-align: start;
-
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px;
+    background: #D2DCB6;
+}
 
-    padding: 40px;
+.slide-card {
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     text-align: center;
+    animation: fadeSlide 0.8s ease;
+}
 
-    background: #778873;   /* <— warna yang kamu minta */
-    animation: fadeSlide .6s ease forwards;
+.slide-card h2 {
+    font-size: 30px;
+    color: #4C763B;
+    margin-bottom: 14px;
+}
+
+.slide-card p {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Animasi smooth */
