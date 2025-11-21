@@ -6,6 +6,25 @@
     <title>Ragam Wisata Populer Jawa Timur</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+const slides = document.querySelectorAll('.slide');
+
+function checkSlides() {
+  slides.forEach(slide => {
+    const rect = slide.getBoundingClientRect();
+    if (rect.top >= 0 && rect.top < window.innerHeight) {
+      slide.classList.add('visible');
+      slide.classList.remove('hidden');
+    } else {
+      slide.classList.add('hidden');
+      slide.classList.remove('visible');
+    }
+  });
+}
+
+document.addEventListener('scroll', checkSlides);
+checkSlides();
+</script>
 
 <body>
 
