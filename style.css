@@ -224,47 +224,34 @@ header h1 {
 }
 /* FULLSCREEN SLIDER */
 .slides {
-    height: 100vh;
-    width: 100%;
-    overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    position: relative;
 }
 
-.slide {
+/* Slide Header fullscreen */
+.slide:first-child {
     height: 100vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start;
-    background: #C7D9B7;
-    padding: 40px;
-    box-sizing: border-box;
 }
 
+/* Slide lainnya auto height */
+.slide:not(:first-child) {
+    height: auto;
+    padding: 40px 0;
+    display: block; /* biar grid bisa memanjang */
+}
+
+/* Slide card tetap rapi */
 .slide-card {
     width: 90%;
-    max-width: 650px;
+    max-width: 900px;
+    margin: 0 auto;
     background: rgba(255,255,255,0.95);
     padding: 32px;
     border-radius: 22px;
     box-shadow: 0 12px 28px rgba(0,0,0,0.18);
     text-align: center;
     animation: fadeSlide 0.8s ease;
-}
-
-.slide-card h2 {
-    font-size: 32px;
-    color: #4C763B;
-    margin-bottom: 10px;
-}
-
-.slide-card p {
-    font-size: 17px;
-    color: #333;
-    line-height: 1.6;
-}
-
 }
