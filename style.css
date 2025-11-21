@@ -29,13 +29,15 @@ header {
 /* tulisan header */
 header h1 {
     position: relative;
-    color: #4C763B
+    color: #FFF5F2;   
     font-size: 45px;
     font-weight: 700;
     letter-spacing: 2px;
     text-shadow: 0 4px 12px rgba(0,0,0,0.6);
     animation: fadeDown 1.4s ease;
     text-align: center;
+}
+
 }
 
 @keyframes fadeDown {
