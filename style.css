@@ -6,17 +6,15 @@
 }
 
 body {
-   body {
     font-family: Poppins, Times New Romans, sans-serif;
     background: linear-gradient(135deg, #FFFD8F, #f2ddc1);
     color: #2c3e50;
     line-height: 1.7;
 }
 
-
 /* HEADER MEWAH & ELEGAN */
 header {
-    background: linear-gradient(135deg, #4C763B, #043915); /* navy gelap */
+    background: #4C763B;
     height: 320px;
     display: flex;
     justify-content: center;
