@@ -260,3 +260,6 @@ header h1 {
     animation: fadeSlide 0.8s ease;
 }
 
+.slide-card h2 {
+    color: #4C763B; /* ganti dengan warna yang kamu inginkan */
+}
